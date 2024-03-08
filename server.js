@@ -29,14 +29,14 @@ app.get('/books/:id', (req, res) => {
     const updateIndex = books.findIndex(book => book.id === req.params.id)
     res.json(Object.assign(books[updateIndex], req.body))
   })
-/*
+
 //Delete from books where id = 5
   app.delete('/books/:id', (req, res) => {
     const deletedIndex = books.findIndex(book => book.id === req.params.id)
     delete books[deletedIndex];
     res.status(200).json(req.body)
 })
-*/
+
 app.listen(3000, () => {
   console.log('http://localhost:3000')
 })
